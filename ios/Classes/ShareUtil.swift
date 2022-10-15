@@ -2,7 +2,7 @@ import Photos
 import FBSDKCoreKit
 import FBSDKShareKit
 import Social
-import TikTokOpenSDK
+// import TikTokOpenSDK
 
 public class ShareUtil{
     
@@ -252,22 +252,23 @@ public class ShareUtil{
     
     
     func shareToTwitter(args : [String: Any?],result: @escaping FlutterResult) {
-        let title = args[self.argMessage] as? String
-        let image = args[self.argImagePath] as? String
-        if(!canOpenUrl(appName: "twitter")){
-            result(ERROR_APP_NOT_AVAILABLE)
-            return
-        }
+        // let title = args[self.argMessage] as? String
+        // let image = args[self.argImagePath] as? String
+        // if(!canOpenUrl(appName: "twitter")){
+        //     result(ERROR_APP_NOT_AVAILABLE)
+        //     return
+        // }
         
         
-        let composeCtl = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
-        composeCtl?.add(URL(string: title!))
-        if(!(image==nil)){
-            composeCtl?.add(UIImage.init(contentsOfFile: image!))
-        }
-        composeCtl?.setInitialText(title!)
-        UIApplication.topViewController()?.present(composeCtl!,animated:true,completion:nil);
-        result(SUCCESS)
+        // let composeCtl = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+        // composeCtl?.add(URL(string: title!))
+        // if(!(image==nil)){
+        //     composeCtl?.add(UIImage.init(contentsOfFile: image!))
+        // }
+        // composeCtl?.setInitialText(title!)
+        // UIApplication.topViewController()?.present(composeCtl!,animated:true,completion:nil);
+        // result(SUCCESS)
+        result(ERROR)
     }
     
     
